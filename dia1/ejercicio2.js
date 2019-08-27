@@ -8,24 +8,19 @@ const users = [
 ];
 // elemento con las letras 'hon'
 const result = users.filter(val =>{
-    val.nombre.includes("hon");
+    return val.nombre.includes("hon");
 });
 console.log(result);
+
 
 // ejercicio2
 
 const euros = [29.76, 41.85, 46.5 ];
-
-euros.map(val => sum(val));
-euros.map(val => promedio(val));
-
-
-function sum(number){
-    // 
-}
-
-function promedio() {
-    //
-}
-
+const sum = euros.reduce((a, b) => {return a + b});
+const media  = euros.reduce((total, amount) => {
+    total += amount
+    return total/2
+  });
 // obteer la suma y los promedios de os valores
+console.log('sum: ', sum);
+console.log('media: ', media);
